@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Евгений Нечепорук](https://up.htmlacademy.ru/adaptive/26/user/2091833).
-* Наставник: `Неизвестно`.
+- Студент: [Евгений Нечепорук](https://up.htmlacademy.ru/adaptive/26/user/2091833).
+- Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
