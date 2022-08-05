@@ -30,11 +30,11 @@
         />
       </a>
       <nav class="main-nav">
-        <button class="header__nav-menu button-burger" type="button">
+        <button class="button-burger" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__element nav__element--current">главная</li>
+          <li class="main-nav__element main-nav__element--current">главная</li>
           <li class="main-nav__element">каталог продукции</li>
           <li class="main-nav__element">подбор программы</li>
         </ul>
@@ -273,18 +273,20 @@
           <button class="button button--primary" type="button">заказать</button>
         </div>
       </section>
-      <section class="gift gift__inner">
-        <h2 class="visually-hidden">Подарок для Вашего кота</h2>
-        <img
-          class="gift__icon"
-          src="img/icon_gift.svg"
-          alt="Подарок для Вашего кота"
-          width="78"
-          height="80"
-        />
-        <p class="gift__text">
-          Закажите все и получите чехол для кота в подарок!
-        </p>
+      <section class="gift">
+        <div class="gift__inner">
+          <h2 class="visually-hidden">Подарок для Вашего кота</h2>
+          <img
+            class="gift__icon"
+            src="img/icon_gift.svg"
+            alt="Подарок для Вашего кота"
+            width="78"
+            height="80"
+          />
+          <p class="gift__text">
+            Закажите все и получите чехол для кота в подарок!
+          </p>
+        </div>
       </section>
       <section class="cooperation container">
         <h2 class="visually-hidden">Сотрудничество</h2>
@@ -309,10 +311,10 @@
         />
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="footer container">
       <div class="footer__logo-wrapper">
         <img
-          class="main-footer__logo-image"
+          class="footer__logo-image"
           src="img/logo_name.svg"
           alt="Компания Кэт энерджи"
           width="128"
