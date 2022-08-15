@@ -37,7 +37,7 @@
   list-style-type: none;
 }
 
-.form-text {
+.questionnaire__form-text {
   @include mixin.text_reset;
   font-size: 16px;
   line-height: 18px;

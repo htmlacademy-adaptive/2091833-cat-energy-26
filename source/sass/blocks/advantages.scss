@@ -1,6 +1,6 @@
 @use "../mixin.scss";
 
-.advantages-card {
+.advantages__card {
   background-color: #f2f2f2;
   width: 280px;
 }
@@ -10,7 +10,7 @@
   margin-bottom: 20px;
 }
 
-.advantages-card__title {
+.advantages__card-title {
   @include mixin.reset; //сбрасывает padding и margin
   font-size: 24px;
   line-height: 37px;
@@ -18,13 +18,13 @@
   font-weight: normal;
 }
 
-.advantages-card__description {
+.advantages__card-description {
   @include mixin.reset; //сбрасывает padding и margin
   font-family: "Arial", sans-serif;
   color: #444444;
 }
 
-.advantages-card__link {
+.advantages__card-link {
   @include mixin.reset; //сбрасывает padding и margin
   font-size: 16px;
   line-height: 16px;

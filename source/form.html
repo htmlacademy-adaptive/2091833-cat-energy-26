@@ -68,7 +68,7 @@
                 class="questionnaire__form-label"
                 for="questionnaire__form-name"
                 >ИМЯ:*<input
-                  class="questionnaire__form-name form-text"
+                  class="questionnaire__form-name questionnaire__form-text"
                   type="text"
                   placeholder="барсик"
                   id="questionnaire__form-name"
@@ -78,7 +78,7 @@
                 class="questionnaire__form-label"
                 for="questionnaire__form-weight"
                 >Вес (кг):*<input
-                  class="questionnaire__form-weight form-text"
+                  class="questionnaire__form-weight questionnaire__form-text"
                   type="number"
                   placeholder="7"
                   id="questionnaire__form-weight"
@@ -88,7 +88,7 @@
                 class="questionnaire__form-label"
                 for="questionnaire__form-old"
                 >Возраст (лет):<input
-                  class="questionnaire__form-old form-text"
+                  class="questionnaire__form-old questionnaire__form-text"
                   type="number"
                   placeholder="7"
                   id="questionnaire__form-old"
@@ -103,7 +103,7 @@
                       type="radio"
                       name="weight-choice"
                       value="weight-loss"
-                    /><span class="form-text">похудение</span>
+                    /><span class="questionnaire__form-text">похудение</span>
                   </label>
                 </li>
                 <li class="questionnaire__form-choice-element">
@@ -113,7 +113,7 @@
                       type="radio"
                       name="weight-choice"
                       value="weight-gain"
-                    /><span class="form-text">Набор массы</span>
+                    /><span class="questionnaire__form-text">Набор массы</span>
                   </label>
                 </li>
                 <li class="questionnaire__form-choice-element">
@@ -123,7 +123,9 @@
                       type="radio"
                       name="weight-choice"
                       value="weight-dont-know"
-                    /><span class="form-text">Не знаю (Нужен ваш совет)</span>
+                    /><span class="questionnaire__form-text"
+                      >Не знаю (Нужен ваш совет)</span
+                    >
                   </label>
                 </li>
               </ul>
@@ -156,7 +158,7 @@
             Комментарий
           </h2>
           <textarea class="questionnaire__form-textarea" rows="6">
-<span class="form-text">Расскажите обо всех повАдках кота</span></textarea
+<span class="questionnaire__form-text">Расскажите обо всех повАдках кота</span></textarea
           >
           <h2
             class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
@@ -170,28 +172,28 @@
                 type="checkbox"
                 name="sugar-free"
                 checked
-              /><span class="form-text">сахарозаменитель</span>
+              /><span class="questionnaire__form-text">сахарозаменитель</span>
             </li>
             <li class="questionnaire__form-checkbox-element">
               <input
                 class="questionnaire__form-checkbox"
                 type="checkbox"
                 name="water"
-              /><span class="form-text">питьевая вода</span>
+              /><span class="questionnaire__form-text">питьевая вода</span>
             </li>
             <li class="questionnaire__form-checkbox-element">
               <input
                 class="questionnaire__form-checkbox"
                 type="checkbox"
                 name="milk"
-              /><span class="form-text">молоко</span>
+              /><span class="questionnaire__form-text">молоко</span>
             </li>
             <li class="questionnaire__form-checkbox-element">
               <input
                 class="questionnaire__form-checkbox"
                 type="checkbox"
                 name="vitamine"
-              /><span class="form-text">витамины</span>
+              /><span class="questionnaire__form-text">витамины</span>
             </li>
           </ul>
           <div class="questionnaire__form-submit">
