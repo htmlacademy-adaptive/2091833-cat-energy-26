@@ -1,0 +1,55 @@
+@use "../mixin.scss";
+
+.example {
+  background-color: #eaeaea;
+}
+
+.example__title {
+  margin-bottom: 40px;
+}
+
+.example__description {
+  @include mixin.reset; //сбрасывает padding и margin
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+
+.example__info-wrapper {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.example__info-inner {
+  margin-bottom: 20px;
+}
+
+.example__info-title {
+  font-family: "Arial", sans-serif;
+  color: #444444;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.example__info-text {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__price-title {
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__before-after {
+  padding-bottom: 40px;
+}
+
+.example__before-after-text {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

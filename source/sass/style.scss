@@ -1,1 +1,47 @@
-// Начните писать стили здесь
+@use "fonts.scss";
+@use "mixin.scss";
+@use "variables.scss";
+@use "blocks/main-header.scss";
+@use "blocks/introduction.scss";
+@use "blocks/advantages.scss";
+@use "blocks/features.scss";
+@use "blocks/example.scss";
+@use "blocks/cooperation.scss";
+@use "blocks/footer.scss";
+@use "blocks/product.scss";
+@use "blocks/additional.scss";
+@use "blocks/questionnaire.scss";
+
+body {
+  @include mixin.reset; //сбрасывает padding и margin
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000000;
+  width: 320px; //хз, надо ли ширину указывать
+}
+
+.button {
+  @include mixin.reset; //сбрасывает padding и margin
+  border: none;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button--primary {
+  color: #ffffff;
+  background-color: variables.$primary-color;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}

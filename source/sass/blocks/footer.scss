@@ -1,0 +1,29 @@
+@use "../mixin.scss";
+
+.footer {
+  background-color: #f2f2f2;
+}
+
+.footer__logo-wrapper {
+  padding: 32px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__logo-image {
+  margin: 0 auto;
+  display: block;
+}
+
+.footer__social {
+  padding: 23px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__social-list {
+  @include mixin.reset; //сбрасывает padding и margin
+  list-style-type: none;
+}
+
+.footer__academy-logo {
+  padding: 22px 0;
+}
