@@ -1,0 +1,41 @@
+@use "../mixin.scss";
+
+.introduction__title-wrapper {
+  padding: 28px 36px;
+}
+
+.introduction {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.introduction__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  width: 250px;
+}
+
+.introduction__title-position {
+  @include mixin.reset;
+  margin-bottom: 25px;
+}
+
+.introduction__subtitle {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.introduction__title-backimage-wrapper {
+  background-color: rgba(104, 183, 56, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.introduction__title-backimage {
+  background-color: rgba(104, 183, 56, 0.85);
+  opacity: 0.2;
+}

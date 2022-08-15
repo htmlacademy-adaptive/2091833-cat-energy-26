@@ -1,0 +1,9 @@
+@use "../mixin.scss";
+
+.gift__text {
+  @include mixin.text_reset;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+}

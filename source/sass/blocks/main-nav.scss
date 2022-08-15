@@ -1,0 +1,15 @@
+@use "../mixin.scss";
+
+.main-nav__list {
+  @include mixin.reset;
+  list-style-type: none;
+}
+
+.main-nav__element-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}

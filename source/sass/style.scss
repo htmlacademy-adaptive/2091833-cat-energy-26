@@ -1,1 +1,16 @@
-// Начните писать стили здесь
+@use "fonts.scss";
+@use "mixin.scss";
+@use "variables.scss";
+@use "blocks/main-nav.scss";
+@use "blocks/introduction.scss";
+@use "blocks/advantages.scss";
+@use "blocks/features.scss";
+@use "blocks/example.scss";
+@use "blocks/cooperation.scss";
+@use "blocks/footer.scss";
+@use "blocks/catalog-page.scss";
+@use "blocks/product.scss";
+@use "blocks/additional.scss";
+@use "blocks/questionnaire.scss";
+@use "blocks/gift.scss";
+@use "global.scss"; //Глобальные и основные свойства. Кнопки, body, container.

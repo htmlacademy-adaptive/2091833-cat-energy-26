@@ -1,0 +1,12 @@
+@use "../mixin.scss";
+
+.catalog-page__title {
+  @include mixin.text_reset;
+  padding: 27px 0 40px;
+}
+
+.catalog-page__title-decoration {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}

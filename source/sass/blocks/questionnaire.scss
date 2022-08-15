@@ -1,0 +1,71 @@
+@use "../mixin.scss";
+
+.questionnaire__title {
+  @include mixin.text_reset;
+  padding-top: 27px;
+  margin-bottom: 37px;
+}
+
+.questionnaire__title-decoration {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.questionnaire__text {
+  @include mixin.text_reset;
+  margin-bottom: 39px;
+}
+
+.questionnaire__form-inner {
+  margin-bottom: 24px;
+}
+
+.questionnaire__text-decoration {
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
+.questionnaire__form-label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.questionnaire__form-choice-list {
+  @include mixin.reset;
+  list-style-type: none;
+}
+
+.questionnaire__form-text {
+  @include mixin.text_reset;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.questionnaire__form-choice-wrapper {
+  padding: 22px 0 20px;
+}
+
+.questionnaire__form-subtitle {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.questionnaire__form-subtitle-wrapper {
+  @include mixin.text_reset;
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
+
+.questionnaire__form-checkbox-list {
+  @include mixin.reset;
+  margin-bottom: 32px;
+  list-style-type: none;
+}
+
+.questionnaire__form-submit {
+  margin-bottom: 32px;
+}

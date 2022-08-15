@@ -1,0 +1,16 @@
+@use "../mixin.scss";
+
+.features__title {
+  @include mixin.reset; //сбрасывает padding и margin
+  margin-bottom: 40px;
+}
+
+.features__card-description {
+  color: #444444;
+  font-family: "Arial", sans-serif;
+}
+
+.features__card-description-wrapper {
+  @include mixin.reset; //сбрасывает padding и margin
+  margin-bottom: 24px;
+}
