@@ -1,8 +1,17 @@
 @use "../mixin.scss";
+@use "../variables.scss";
 
 .main-nav__list {
   @include mixin.reset;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
+
+  @media (max-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__element-link {

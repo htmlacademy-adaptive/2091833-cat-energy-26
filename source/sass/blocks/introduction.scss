@@ -1,12 +1,40 @@
 @use "../mixin.scss";
-
-.introduction__title-wrapper {
-  padding: 28px 36px;
-}
+@use "../variables.scss";
 
 .introduction {
   position: relative;
+  width: 320px;
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    position: relative;
+    width: 1330px;
+    height: 554px;
+  }
+}
+
+.introduction__wrapper {
   margin-bottom: 20px;
+}
+
+.introduction__title-wrapper {
+  padding: 28px 0 0;
+  width: 250px;
+  margin: auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 414px;
+    margin: 0;
+    margin-left: 117px;
+    padding: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 414px;
+    margin: 0;
+    margin-left: 190px;
+    padding: 0;
+  }
 }
 
 .introduction__title {
@@ -15,6 +43,17 @@
   line-height: 36px;
   color: #ffffff;
   width: 250px;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    color: #000000;
+    text-align: left;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: #000000;
+    text-align: left;
+  }
 }
 
 .introduction__title-position {
@@ -25,6 +64,21 @@
 .introduction__subtitle {
   text-transform: uppercase;
   color: #ffffff;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    color: #000000;
+    text-align: left;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: #000000;
+    text-align: left;
+  }
 }
 
 .introduction__title-backimage-wrapper {
@@ -33,9 +87,43 @@
   top: 0;
   left: 0;
   z-index: -1;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: block;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: -200px;
+    width: 720px;
+    height: 694px;
+  }
 }
 
 .introduction__title-backimage {
   background-color: rgba(104, 183, 56, 0.85);
   opacity: 0.2;
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.introduction__button {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    top: 190px;
+    left: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    top: 190px;
+    left: 190px;
+  }
 }

@@ -1,8 +1,48 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+
+.features__card-wrapper {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 634px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1400px;
+    justify-content: space-between;
+  }
+}
 
 .features__title {
   @include mixin.reset; //сбрасывает padding и margin
   margin-bottom: 40px;
+}
+
+.features__card {
+  max-width: 278px;
+  height: 60px;
+  margin-bottom: 24px;
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    width: 248px;
+    height: 280px;
+    margin-bottom: 37px;
+
+    &:first-child {
+      width: 230px;
+      margin-right: 153px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 137px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 248px;
+    height: 280px;
+  }
 }
 
 .features__card-description {
@@ -12,5 +52,19 @@
 
 .features__card-description-wrapper {
   @include mixin.reset; //сбрасывает padding и margin
-  margin-bottom: 24px;
+  max-width: 199px;
+
+  @media (min-width: variables.$tablet-width) {
+    max-width: 245px;
+  }
+}
+
+.features__card-number {
+  @media (max-width: variables.$tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: block;
+  }
 }
