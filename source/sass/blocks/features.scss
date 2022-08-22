@@ -1,5 +1,6 @@
 @use "../mixin.scss";
 @use "../variables.scss";
+@use "../colors.scss";
 
 .features__card-wrapper {
   @media (min-width: variables.$tablet-width) {
@@ -46,7 +47,7 @@
 }
 
 .features__card-description {
-  color: #444444;
+  color: colors.$grey;
   font-family: "Arial", sans-serif;
 }
 

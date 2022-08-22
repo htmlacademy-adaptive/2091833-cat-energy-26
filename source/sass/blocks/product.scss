@@ -1,5 +1,6 @@
 @use "../mixin.scss";
 @use "../variables.scss";
+@use "../colors.scss";
 
 .product__card-wrapper {
   display: grid;
@@ -26,7 +27,7 @@
 
 .product__card-title {
   @include mixin.text_reset;
-  color: #222222;
+  color: colors.$dark;
   font-size: 16px;
   line-height: 20px;
 }
@@ -40,7 +41,7 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: colors.$grey;
 }
 
 .product__show-more {
@@ -55,7 +56,7 @@
   text-transform: uppercase;
   line-height: 20px;
   font-size: 16px;
-  color: #111111;
+  color: colors.$darken;
   width: 204px;
 
   @media (min-width: variables.$tablet-width) {
@@ -67,7 +68,7 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: colors.$grey;
   width: 221px;
 
   @media (min-width: variables.$tablet-width) {

@@ -1,5 +1,6 @@
 @use "mixin.scss";
 @use "variables.scss";
+@use "colors.scss";
 
 body {
   @include mixin.reset; //сбрасывает padding и margin
@@ -7,7 +8,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #000000;
+  color: colors.$black;
 }
 
 .page__body {
@@ -37,8 +38,8 @@ body {
 }
 
 .button--primary {
-  color: #ffffff;
-  background-color: variables.$primary-color;
+  color: colors.$white;
+  background-color: colors.$primary-color;
 }
 
 .button--catalog {

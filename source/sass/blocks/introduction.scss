@@ -1,5 +1,6 @@
 @use "../mixin.scss";
 @use "../variables.scss";
+@use "../colors.scss";
 
 .introduction {
   position: relative;
@@ -41,17 +42,17 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  color: #ffffff;
+  color: colors.$white;
   width: 250px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
-    color: #000000;
+    color: colors.$black;
     text-align: left;
   }
 
   @media (min-width: variables.$desktop-width) {
-    color: #000000;
+    color: colors.$black;
     text-align: left;
   }
 }
@@ -63,26 +64,26 @@
 
 .introduction__subtitle {
   text-transform: uppercase;
-  color: #ffffff;
+  color: colors.$white;
   text-align: center;
   display: block;
   margin-bottom: 30px;
 
   @media (min-width: variables.$tablet-width) {
-    color: #000000;
+    color: colors.$black;
     text-align: left;
     margin-left: auto;
     margin-bottom: 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    color: #000000;
+    color: colors.$black;
     text-align: left;
   }
 }
 
 .introduction__title-backimage-wrapper {
-  background-color: rgba(104, 183, 56, 0.85);
+  background-color: colors.$green-transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -104,7 +105,7 @@
 }
 
 .introduction__title-backimage {
-  background-color: rgba(104, 183, 56, 0.85);
+  background-color: colors.$green-transparent;
   opacity: 0.2;
 
   @media (min-width: variables.$desktop-width) {

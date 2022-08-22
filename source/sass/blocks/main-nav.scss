@@ -1,5 +1,6 @@
 @use "../mixin.scss";
 @use "../variables.scss";
+@use "../colors.scss";
 
 .main-nav__list {
   @include mixin.reset;
@@ -19,6 +20,6 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #000000;
+  color: colors.$black;
   text-decoration: none;
 }
