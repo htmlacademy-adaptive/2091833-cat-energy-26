@@ -1,4 +1,21 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+@use "../colors.scss";
+
+.product__card-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
 .product__card {
   margin-bottom: 20px;
@@ -10,7 +27,7 @@
 
 .product__card-title {
   @include mixin.text_reset;
-  color: #222222;
+  color: colors.$dark;
   font-size: 16px;
   line-height: 20px;
 }
@@ -24,12 +41,14 @@
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: colors.$grey;
 }
 
 .product__show-more {
   padding: 25px 0;
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product__show-more-title {
@@ -37,12 +56,22 @@
   text-transform: uppercase;
   line-height: 20px;
   font-size: 16px;
-  color: #111111;
+  color: colors.$darken;
+  width: 204px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 134px;
+  }
 }
 
 .product__show-more-text {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
+  color: colors.$grey;
+  width: 221px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 167px;
+  }
 }

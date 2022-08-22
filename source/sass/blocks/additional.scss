@@ -1,7 +1,9 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+@use "../colors.scss";
 
 .additional {
-  margin: 0 20px 35px 20px;
+  padding: 0 20px 35px 20px;
 }
 
 .additional__title-decoration {
@@ -14,11 +16,42 @@
   margin-bottom: 36px;
 }
 
+.additional__card-wrapper {
+  margin-bottom: 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.additional__card-gift {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+  }
+}
+
 .additional__card {
+  width: 281px;
   margin-bottom: 19px;
+  padding-top: 12px;
 
   &:last-child {
     margin-bottom: 0;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    width: 632px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 894px;
   }
 }
 
@@ -26,5 +59,17 @@
   @include mixin.text_reset;
   font-size: 16px;
   line-height: 16px;
-  color: #222222;
+  color: colors.$dark;
+}
+
+.additional__button {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 244px;
+  }
 }

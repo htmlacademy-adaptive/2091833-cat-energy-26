@@ -1,0 +1,48 @@
+@use "../mixin.scss";
+@use "../variables.scss";
+
+.main-header {
+  padding: 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.main-header__wrapper {
+  margin-bottom: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 74px;
+  }
+}
+
+.main-header__wrapper-index {
+  margin-bottom: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 110px;
+  }
+}
+
+.main-header__logo-image-mobile {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+
+  @media (max-width: variables.$tablet-width) {
+    display: none;
+  }
+}

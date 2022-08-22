@@ -1,7 +1,21 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+@use "../colors.scss";
 
 .example {
-  background-color: #eaeaea;
+  background-color: colors.$white-lighter;
+  padding: 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: colors.$white;
+    padding: 0 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    padding: 0 110px;
+    background-color: colors.$white-light;
+  }
 }
 
 .example__title {
@@ -9,27 +23,55 @@
 }
 
 .example__description {
-  @include mixin.reset; //сбрасывает padding и margin
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  color: colors.$grey;
+}
+
+.example__description-wrapper {
+  @include mixin.reset; //сбрасывает padding и margin
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 436px;
+  }
 }
 
 .example__info-wrapper {
   margin-top: 20px;
   margin-bottom: 40px;
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+    display: flex;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 366px;
+    flex-direction: column;
+  }
 }
 
 .example__info-inner {
   margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 366px;
+    display: flex;
+  }
 }
 
 .example__info-title {
   font-family: "Arial", sans-serif;
-  color: #444444;
+  color: colors.$grey;
   font-size: 12px;
   line-height: 100%;
 }
@@ -52,4 +94,10 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.example__image {
+  @media (min-width: variables.$desktop-width) {
+    margin-left: auto;
+  }
 }

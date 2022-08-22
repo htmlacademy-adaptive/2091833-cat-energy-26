@@ -1,6 +1,7 @@
 @use "fonts.scss";
 @use "mixin.scss";
 @use "variables.scss";
+@use "colors.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/introduction.scss";
 @use "blocks/advantages.scss";
@@ -13,4 +14,5 @@
 @use "blocks/additional.scss";
 @use "blocks/questionnaire.scss";
 @use "blocks/gift.scss";
+@use "blocks/main-header.scss";
 @use "global.scss"; //Глобальные и основные свойства. Кнопки, body, container.

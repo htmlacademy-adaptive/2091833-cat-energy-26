@@ -1,4 +1,6 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+@use "../colors.scss";
 
 .questionnaire__title {
   @include mixin.text_reset;
@@ -14,10 +16,32 @@
 .questionnaire__text {
   @include mixin.text_reset;
   margin-bottom: 39px;
+  width: 226px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 323px;
+  }
+}
+
+.questionnaire__form-wrapper {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+  }
 }
 
 .questionnaire__form-inner {
   margin-bottom: 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 569px;
+  }
 }
 
 .questionnaire__text-decoration {
@@ -29,7 +53,24 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #444444;
+  color: colors.$grey;
+}
+
+.questionnaire__form-old {
+  width: 172px;
+}
+
+.questionnaire__form-choice-wrapper {
+  width: 276px;
+  padding: 22px 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 568px;
+  }
 }
 
 .questionnaire__form-choice-list {
@@ -37,16 +78,38 @@
   list-style-type: none;
 }
 
+.questionnaire__form-contact {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+  }
+}
+
+.questionnaire__form-textarea {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
+  }
+}
+
 .questionnaire__form-text {
   @include mixin.text_reset;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #222222;
-}
-
-.questionnaire__form-choice-wrapper {
-  padding: 22px 0 20px;
+  color: colors.$dark;
 }
 
 .questionnaire__form-subtitle {
@@ -64,6 +127,31 @@
   @include mixin.reset;
   margin-bottom: 32px;
   list-style-type: none;
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 565px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
+  }
+}
+
+.questionnaire__form-checkbox-element {
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    margin-right: 124px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 104px;
+  }
 }
 
 .questionnaire__form-submit {

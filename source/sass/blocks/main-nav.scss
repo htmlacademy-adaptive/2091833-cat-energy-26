@@ -1,8 +1,18 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+@use "../colors.scss";
 
 .main-nav__list {
   @include mixin.reset;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+  }
+
+  @media (max-width: variables.$tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__element-link {
@@ -10,6 +20,6 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #000000;
+  color: colors.$black;
   text-decoration: none;
 }
