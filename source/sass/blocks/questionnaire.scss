@@ -141,6 +141,15 @@
   border: 1px solid colors.$white-lighter3;
   box-sizing: border-box;
   padding: 13px 15px;
+  outline: none;
+
+  &:hover {
+    border: 1px solid colors.$white-lighter4;
+  }
+
+  &:focus {
+    border: 2px solid colors.$grey;
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding: 10px 19px;
@@ -237,8 +246,16 @@
   content: "";
   top: -6px;
   left: 0;
-  border: 1px solid #cdcdcd;
+  border: 1px solid colors.$white-lighter4;
   box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid colors.$white-lighter5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 
   @media (min-width: variables.$tablet-width) {
     top: -11px;
@@ -259,7 +276,7 @@
 .questionnaire__form-radio[type="radio"]:checked + .radio-control::before {
   content: "";
   position: absolute;
-  background-color: #68b738;
+  background-color: colors.$primary-color;
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -467,8 +484,16 @@
   height: 30px;
   top: 0;
   left: 0;
-  border: 1px solid #cdcdcd;
+  border: 1px solid colors.$white-lighter4;
   box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid colors.$white-lighter5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
