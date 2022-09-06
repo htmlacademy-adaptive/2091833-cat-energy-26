@@ -13,6 +13,7 @@ body {
 
 .page__body {
   position: relative;
+  min-width: 320px;
 }
 
 .visually-hidden {
@@ -34,40 +35,92 @@ body {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  font-style: normal;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 .button--primary {
   color: colors.$white;
   background-color: colors.$primary-color;
+  padding: 7px 44px;
+  width: 280px;
+  height: 40px;
+
+  &:hover {
+    background-color: colors.$primary-color-dark;
+  }
+
+  &:active {
+    color: transparentize(colors.$white, 0.3);
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.button--index {
+  @media (min-width: variables.$tablet-width) {
+    padding: 14px 26px;
+    width: 244px;
+  }
 }
 
 .button--catalog {
   width: 279px;
+  padding: 10px 94px;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: colors.$white-lighter2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: variables.$tablet-width) {
     width: 249px;
+    padding: 10px 79px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 169px;
+    padding: 10px 39px;
   }
 }
 
 .container {
-  margin: 0 20px;
+  padding: 0 20px;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 30px;
+    padding: 0 30px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 110px;
+    padding: 0 110px;
   }
 }
 
-.title {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
+.button-additional {
+  @media (min-width: variables.$tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 244px;
+    margin-left: 64px;
+  }
+}
+
+.questionnaire__button {
+  @media (min-width: variables.$tablet-width) {
+    width: 282px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 568px;
+  }
 }

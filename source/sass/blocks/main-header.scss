@@ -2,19 +2,24 @@
 @use "../variables.scss";
 
 .main-header {
-  padding: 0 20px;
+  width: 280px;
+  position: relative;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 30px;
+    width: 708px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 110px;
+    width: 1220px;
   }
 }
 
 .main-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 0;
+  height: 65px;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 64px;
@@ -29,19 +34,32 @@
   margin-bottom: 0;
 
   @media (min-width: variables.$tablet-width) {
+    margin-top: 14px;
     margin-bottom: 62px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin-top: 43px;
     margin-bottom: 110px;
   }
+}
+
+.main-header__logo {
+  display: flex;
+  align-items: center;
 }
 
 .main-header__logo-image-mobile {
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
+}
 
+.main-header__logo-image-mobile-name {
+  margin-left: 56px;
+}
+
+.main-header__logo-image-tablet {
   @media (max-width: variables.$tablet-width) {
     display: none;
   }

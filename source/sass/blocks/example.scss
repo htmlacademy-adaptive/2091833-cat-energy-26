@@ -5,6 +5,9 @@
 .example {
   background-color: colors.$white-lighter;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: variables.$tablet-width) {
     background-color: colors.$white;
@@ -13,13 +16,53 @@
 
   @media (min-width: variables.$desktop-width) {
     display: flex;
+    flex-direction: row;
     padding: 0 110px;
     background-color: colors.$white-light;
   }
 }
 
+.example-wrapper {
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 205px;
+    position: relative;
+  }
+}
+
+.example__inner {
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 70px;
+  }
+}
+
+.example__title-wrapper {
+  margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 69px;
+  }
+}
+
 .example__title {
   margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    margin: 0;
+    top: -136px;
+  }
 }
 
 .example__description {
@@ -29,6 +72,11 @@
   font-size: 14px;
   line-height: 18px;
   color: colors.$grey;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__description-wrapper {
@@ -45,27 +93,49 @@
 }
 
 .example__info-wrapper {
-  margin-top: 20px;
   margin-bottom: 40px;
   width: 280px;
 
   @media (min-width: variables.$tablet-width) {
     width: 708px;
     display: flex;
+    align-items: center;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 366px;
     flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 75px;
   }
 }
 
 .example__info-inner {
+  display: flex;
   margin-bottom: 20px;
+  justify-content: space-between;
 
   @media (min-width: variables.$tablet-width) {
     width: 366px;
-    display: flex;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.example__info {
+  @include mixin.reset; //сбрасывает padding и margin
+  width: 124px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+  padding: 14px 0;
+  transform: rotate(180deg);
+
+  @media (min-width: variables.$tablet-width) {
+    width: 162px;
   }
 }
 
@@ -73,17 +143,67 @@
   font-family: "Arial", sans-serif;
   color: colors.$grey;
   font-size: 12px;
-  line-height: 100%;
+  line-height: 12px;
+  transform: rotate(180deg);
+  width: 77px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    width: auto;
+    padding: 0 8px;
+  }
 }
 
 .example__info-text {
   font-size: 24px;
   line-height: 24px;
+  transform: rotate(180deg);
+  display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__price {
+  text-align: center;
+  display: block;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 327px;
+  }
 }
 
 .example__price-title {
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+
+    &:first-child {
+      margin-bottom: 9px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .example__before-after {
@@ -98,6 +218,7 @@
 
 .example__image {
   @media (min-width: variables.$desktop-width) {
+    display: block;
     margin-left: auto;
   }
 }

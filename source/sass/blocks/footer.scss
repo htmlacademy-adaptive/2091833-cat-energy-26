@@ -9,6 +9,7 @@
   @media (min-width: variables.$tablet-width) {
     padding: 58px 30px 55px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -33,6 +34,14 @@
 .footer__logo-image {
   margin: 0 auto;
   display: block;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__social {
@@ -45,22 +54,69 @@
 .footer__social-list {
   @include mixin.reset; //сбрасывает padding и margin
   list-style-type: none;
+  width: 132px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+  }
+}
+
+.footer__social-element {
+  margin-right: 24px;
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    .footer__social-element-image path {
+      fill: colors.$primary-color;
+    }
+  }
+
+  &:active {
+    .footer__social-element-image path {
+      opacity: 0.3;
+    }
+  }
 }
 
 .footer__academy-logo {
   padding: 22px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 281px;
   margin: 0 auto;
 
+  &:hover path {
+    fill: colors.$primary-color;
+  }
+
+  &:active {
+    fill: colors.$primary-color;
+    opacity: 0.3;
+  }
+
   @media (min-width: variables.$tablet-width) {
     padding: 0;
+    margin: 0;
     width: 163px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 0;
   }
+}
+
+.footer__academy-logo-text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: colors.$grey;
 }

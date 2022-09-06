@@ -5,13 +5,15 @@
 .cooperation {
   background-color: colors.$white;
   position: relative;
+  width: 100%;
 }
 
 .cooperation__inner {
-  padding: 26px 0;
+  padding: 26px 20px;
   display: flex;
   justify-content: space-between;
   width: 280px;
+  margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
     width: 708px;
@@ -20,10 +22,9 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 565px;
-    height: 198px;
     position: absolute;
-    top: 20px;
-    left: 0;
+    top: 95px;
+    left: 110px;
     z-index: 1;
     background-color: colors.$white;
   }
@@ -45,9 +46,12 @@
   line-height: 20px;
   text-transform: uppercase;
   width: 140px;
+  color: colors.$darken;
 
   @media (min-width: variables.$tablet-width) {
     width: 172px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -61,5 +65,16 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 160px;
+    font-size: 16px;
+  }
+}
+
+.cooperation__maps {
+  display: block;
+  width: 100%;
+  border: none;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 400px;
   }
 }

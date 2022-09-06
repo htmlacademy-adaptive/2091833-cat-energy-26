@@ -6,16 +6,24 @@
   position: relative;
   width: 320px;
 
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+  }
+
   @media (min-width: variables.$desktop-width) {
     display: flex;
-    position: relative;
-    width: 1330px;
-    height: 554px;
+    width: auto;
+    margin-right: 0;
   }
 }
 
 .introduction__wrapper {
   margin-bottom: 20px;
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 116px;
+    margin-bottom: 343px;
+  }
 }
 
 .introduction__title-wrapper {
@@ -24,17 +32,14 @@
   margin: auto;
 
   @media (min-width: variables.$tablet-width) {
-    width: 414px;
+    width: 416px;
     margin: 0;
     margin-left: 117px;
     padding: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 414px;
-    margin: 0;
     margin-left: 190px;
-    padding: 0;
   }
 }
 
@@ -43,23 +48,23 @@
   font-size: 36px;
   line-height: 36px;
   color: colors.$white;
-  width: 250px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     color: colors.$black;
     text-align: left;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    color: colors.$black;
-    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .introduction__title-position {
   @include mixin.reset;
   margin-bottom: 25px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .introduction__subtitle {
@@ -74,6 +79,8 @@
     text-align: left;
     margin-left: auto;
     margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -96,10 +103,10 @@
   @media (min-width: variables.$desktop-width) {
     display: block;
     position: absolute;
-    left: auto;
+    left: 720px;
     right: 0;
-    top: -200px;
-    width: 720px;
+    top: -218px;
+    width: auto;
     height: 694px;
   }
 }
@@ -116,15 +123,30 @@
 }
 
 .introduction__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (min-width: variables.$tablet-width) {
     position: absolute;
-    top: 190px;
-    left: 0;
+    top: 230px;
+    left: 120px;
   }
 
   @media (min-width: variables.$desktop-width) {
     position: absolute;
-    top: 190px;
+    top: 230px;
     left: 190px;
+  }
+}
+
+.introduction__can-image {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 558px;
   }
 }
