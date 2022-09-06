@@ -121,7 +121,7 @@
 }
 
 @media (min-width: 1440px) {
-  .main-nav__element-link--catalog.main-nav__element--current {
+  .main-nav__element-link--catalog.main-nav__element-link--current {
     border-bottom: 2px solid #68b738;
   }
 }
@@ -1800,6 +1800,13 @@ button.button--primary-catalog {
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
   padding: 13px 15px;
+  outline: none;
+}
+.questionnaire__form-text:hover {
+  border: 1px solid #cdcdcd;
+}
+.questionnaire__form-text:focus {
+  border: 2px solid #444444;
 }
 @media (min-width: 768px) {
   .questionnaire__form-text {
@@ -1908,6 +1915,12 @@ button.button--primary-catalog {
   left: 0;
   border: 1px solid #cdcdcd;
   box-sizing: border-box;
+}
+.radio-control:hover {
+  border: 1px solid #bababa;
+}
+.radio-control:disabled {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .radio-control {
@@ -2161,6 +2174,12 @@ button.button--primary-catalog {
   left: 0;
   border: 1px solid #cdcdcd;
   box-sizing: border-box;
+}
+.questionnaire__form-checkbox + .checkbox-control:hover {
+  border: 1px solid #bababa;
+}
+.questionnaire__form-checkbox + .checkbox-control:disabled {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .questionnaire__form-checkbox + .checkbox-control {
