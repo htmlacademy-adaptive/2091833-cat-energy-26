@@ -106,7 +106,7 @@
   }
 }
 
-.main-nav__element-link--catalog.main-nav__element--current {
+.main-nav__element-link--catalog.main-nav__element-link--current {
   @media (min-width: variables.$desktop-width) {
     border-bottom: 2px solid colors.$primary-color;
   }
