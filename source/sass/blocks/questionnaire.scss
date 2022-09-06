@@ -6,11 +6,27 @@
   @include mixin.text_reset;
   padding-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .questionnaire__title-decoration {
   font-size: 36px;
   line-height: 36px;
+
+  border-top: 1px solid colors.$light;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+  }
 }
 
 .questionnaire__text {
@@ -20,12 +36,26 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 323px;
+    margin-bottom: 66px;
+  }
+}
+
+.questionnaire__text-decoration {
+  text-transform: uppercase;
+  line-height: 18px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 .questionnaire__form-wrapper {
   @media (min-width: variables.$desktop-width) {
     display: flex;
+    justify-content: space-between;
+    max-width: 1220px;
+    margin-bottom: 65px;
   }
 }
 
@@ -41,31 +71,138 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 569px;
+    margin-bottom: 0;
   }
 }
 
-.questionnaire__text-decoration {
-  text-transform: uppercase;
-  line-height: 18px;
+.questionnaire__form-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.questionnaire__form-label {
+.questionnaire__form-contact-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  position: relative;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 570px;
+    margin-bottom: 0;
+  }
+}
+
+.questionnaire__form-title {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: colors.$grey;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.questionnaire__form-text {
+  @include mixin.text_reset;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: colors.$dark;
+  border: 1px solid colors.$white-lighter3;
+  box-sizing: border-box;
+  padding: 13px 15px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 10px 19px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.questionnaire__form-name {
+  width: 229px;
+  height: 45px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 567px;
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 506px;
+  }
+}
+
+.questionnaire__form-weight {
+  width: 204px;
+  height: 45px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 536px;
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 475px;
+  }
 }
 
 .questionnaire__form-old {
   width: 172px;
+  height: 45px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 497px;
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 436px;
+  }
 }
 
 .questionnaire__form-choice-wrapper {
   width: 276px;
-  padding: 22px 0 20px;
+  padding: 22px 0 0;
+  border-top: 1px solid colors.$light;
+  box-sizing: border-box;
+  margin-bottom: 20px;
 
   @media (min-width: variables.$tablet-width) {
     width: 630px;
+    padding: 25px 28px;
+    border: 1px solid colors.$white-lighter3;
+    margin-bottom: 70px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -78,61 +215,226 @@
   list-style-type: none;
 }
 
+.questionnaire__form-choice-element {
+  margin-bottom: 13px;
+  padding: 6px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 5px 0;
+  }
+}
+
+.questionnaire__form-choice {
+  position: relative;
+}
+
+.radio-control {
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: 0;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    top: -11px;
+  }
+}
+
+.questionnaire__form-radio[type="radio"] + .radio-control {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.questionnaire__form-radio[type="radio"]:checked + .radio-control::before {
+  content: "";
+  position: absolute;
+  background-color: #68b738;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  @media (min-width: variables.$tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.questionnaire__form-choice-text {
+  font-size: 16px;
+  line-height: 18px;
+  color: colors.$dark;
+  text-transform: uppercase;
+  margin-left: 46px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 60px;
+  }
+}
+
 .questionnaire__form-contact {
   width: 280px;
+  margin-bottom: 22px;
 
   @media (min-width: variables.$tablet-width) {
     width: 632px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: variables.$desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 1220px;
+    margin-bottom: 69px;
   }
 }
 
 .questionnaire__form-textarea {
   width: 280px;
+  margin-bottom: 22px;
+  padding: 9px 12px 9px 15px;
+  box-sizing: border-box;
 
   @media (min-width: variables.$tablet-width) {
     width: 632px;
+    margin-bottom: 65px;
+    padding: 10px 19px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 1220px;
+    margin-bottom: 67px;
   }
 }
 
-.questionnaire__form-text {
-  @include mixin.text_reset;
+.questionnaire__form-textarea-text {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: colors.$dark;
+  color: colors.$grey;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .questionnaire__form-subtitle {
   font-size: 24px;
   line-height: 26px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .questionnaire__form-subtitle-wrapper {
   @include mixin.text_reset;
-  margin-top: 25px;
   margin-bottom: 35px;
+  width: 187px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: auto;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    width: auto;
+  }
 }
 
-.questionnaire__form-checkbox-list {
-  @include mixin.reset;
+.questionnaire__form-email {
+  width: 219px;
+  height: 45px;
+  padding-right: 50px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 551px;
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 486px;
+  }
+}
+
+.questionnaire__form-icon-mail {
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  background-image: url("../../img/icon_email.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 20px;
+  height: 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 19px;
+    right: 19px;
+  }
+}
+
+.questionnaire__form-phone {
+  width: 204px;
+  height: 45px;
+  padding-right: 50px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 535px;
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 472px;
+  }
+}
+
+.questionnaire__form-phone-icon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  background-image: url("../../img/icon_phone.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 16px;
+    right: 17px;
+  }
+}
+
+.questionnaire__form-checkbox-wrapper {
   margin-bottom: 32px;
-  list-style-type: none;
+  display: flex;
+  flex-direction: column;
   width: 280px;
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    width: 565px;
+    flex-direction: row;
+    width: 566px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -141,8 +443,13 @@
 }
 
 .questionnaire__form-checkbox-element {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 5px 0 7px;
+
   @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
     margin-right: 124px;
+    width: 221px;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -154,6 +461,70 @@
   }
 }
 
+.questionnaire__form-checkbox + .checkbox-control {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.questionnaire__form-checkbox:checked + .checkbox-control::after {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../../img/tick.png");
+}
+
+.questionnaire__form-checkbox-text {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-left: 46px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 59px;
+  }
+}
+
 .questionnaire__form-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 82px;
+  }
+}
+
+.questionnaire__required-field {
+  margin-top: 21px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+    margin-left: 61px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 81px;
+  }
 }

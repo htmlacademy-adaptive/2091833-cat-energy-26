@@ -2,61 +2,111 @@
 @use "../variables.scss";
 @use "../colors.scss";
 
-.features__card-wrapper {
+.features {
+  margin: 0 auto;
+  width: 320px;
+
   @media (min-width: variables.$tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-    width: 634px;
+    width: 633px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 1400px;
+    width: 1220px;
+  }
+}
+
+.features__card-wrapper {
+  margin-bottom: 49px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 69px;
   }
 }
 
 .features__title {
   @include mixin.reset; //сбрасывает padding и margin
   margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.features__title-decoration {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .features__card {
   max-width: 278px;
   height: 60px;
   margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  position: relative;
 
-  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
-    width: 248px;
+  @media (min-width: variables.$tablet-width) {
+    max-width: 248px;
     height: 280px;
     margin-bottom: 37px;
-
-    &:first-child {
-      width: 230px;
-      margin-right: 153px;
-    }
-
-    &:nth-child(3) {
-      margin-right: 137px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 248px;
     height: 280px;
+    margin-bottom: 0;
+  }
+}
+
+.features__card-image-wrapper {
+  background-color: colors.$primary-color;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
   }
 }
 
 .features__card-description {
   color: colors.$grey;
   font-family: "Arial", sans-serif;
+  line-height: 18px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .features__card-description-wrapper {
   @include mixin.reset; //сбрасывает padding и margin
   max-width: 199px;
+  margin-left: auto;
 
   @media (min-width: variables.$tablet-width) {
     max-width: 245px;
+    margin-top: 31px;
   }
 }
 
@@ -67,5 +117,12 @@
 
   @media (min-width: variables.$tablet-width) {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    font-size: 280px;
+    line-height: 280px;
+    color: colors.$white-light;
   }
 }

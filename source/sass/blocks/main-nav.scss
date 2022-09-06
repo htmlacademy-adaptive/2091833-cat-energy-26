@@ -5,14 +5,35 @@
 .main-nav__list {
   @include mixin.reset;
   list-style-type: none;
+  width: 101%;
+  position: absolute;
+  top: 65px;
+  left: -1px;
+  background-color: colors.$white;
+  z-index: 10;
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
+    position: static;
+    justify-content: flex-start;
+    width: 440px;
+    background-color: transparent;
   }
 
-  @media (max-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
+    justify-content: flex-start;
+    width: 478px;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: variables.$mobile-width-max) {
     display: none;
   }
+}
+
+.main-nav--closed .main-nav__list {
+  display: block;
 }
 
 .main-nav__element-link {
@@ -22,4 +43,135 @@
   text-transform: uppercase;
   color: colors.$black;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: colors.$white;
+  }
+}
+
+.main-nav__element {
+  padding: 22px 0 24px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  margin-top: -1px;
+
+  @media (min-width: variables.$tablet-width) {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 34px;
+    padding-bottom: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 6px;
+  }
+}
+
+.main-nav__element-link--current {
+  @media (min-width: variables.$tablet-width) {
+    border-bottom: 2px solid colors.$primary-color;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    border-bottom: 2px solid colors.$white;
+  }
+}
+
+.main-nav__element-link--catalog {
+  color: colors.$darken;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 6px;
+  }
+}
+
+.main-nav__element-link--catalog.main-nav__element--current {
+  @media (min-width: variables.$desktop-width) {
+    border-bottom: 2px solid colors.$primary-color;
+  }
+}
+
+.button-burger {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: colors.$white;
+  cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .button-burger {
+  border-top: 1.5px solid colors.$black;
+  border-bottom: 1.5px solid colors.$black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6.5px;
+    left: 0;
+    right: 0;
+    border-top: 1.5px solid colors.$black;
+  }
+}
+
+.main-nav--closed .button-burger {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: colors.$white;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1.5px;
+    width: 26px;
+    background-color: colors.$black;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1.5px;
+    width: 26px;
+    background-color: colors.$black;
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav--nojs .button-burger {
+  display: none;
 }

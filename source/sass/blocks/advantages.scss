@@ -3,8 +3,16 @@
 @use "../colors.scss";
 
 .advantages {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+  }
+
   @media (min-width: variables.$desktop-width) {
     display: flex;
+    width: 1220px;
   }
 }
 
@@ -12,13 +20,27 @@
   background-color: colors.$white-light;
   width: 280px;
   box-sizing: border-box;
+  position: relative;
+
+  &::after {
+    @media (max-width: variables.$mobile-width-max) {
+      border: 1px solid colors.$light;
+      position: absolute;
+      content: "";
+      bottom: 55px;
+      left: 20px;
+      width: 240px;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
+    position: relative;
     width: 708px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 570px;
+    box-sizing: border-box;
   }
 }
 
@@ -35,6 +57,24 @@
     padding: 77px 0 55px 52px;
     margin-bottom: 70px;
     margin-right: 80px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.advantages__card-title-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 39px;
   }
 }
 
@@ -44,19 +84,63 @@
   line-height: 37px;
   text-transform: uppercase;
   font-weight: normal;
+  margin-left: 19px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 47px;
+  }
+}
+
+.advantages__card-image {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    right: 62px;
+    bottom: calc(50% - 25px);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: static;
+  }
 }
 
 .advantages__card-description {
   @include mixin.reset; //сбрасывает padding и margin
   font-family: "Arial", sans-serif;
   color: colors.$grey;
+  margin-bottom: 38px;
 
   @media (min-width: variables.$tablet-width) {
     max-width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: variables.$desktop-width) {
     max-width: 467px;
+    margin-bottom: 23px;
+  }
+}
+
+.advantages__card-link-wrapper {
+  width: 134px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    width: 165px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 168px;
   }
 }
 
@@ -67,4 +151,15 @@
   text-transform: uppercase;
   text-decoration: none;
   color: colors.$black;
+  margin-right: 17px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 25px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-right: 28px;
+  }
 }

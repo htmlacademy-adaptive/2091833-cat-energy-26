@@ -1,12 +1,29 @@
 @use "../mixin.scss";
+@use "../variables.scss";
+@use "../colors.scss";
 
 .catalog-page__title {
   @include mixin.text_reset;
   padding: 27px 0 40px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 84px;
+  }
 }
 
 .catalog-page__title-decoration {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+  }
 }
