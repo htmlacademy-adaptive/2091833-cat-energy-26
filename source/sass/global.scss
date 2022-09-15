@@ -65,6 +65,7 @@ body {
   @media (min-width: variables.$tablet-width) {
     padding: 14px 26px;
     width: 244px;
+    height: 54px;
   }
 }
 
@@ -92,16 +93,28 @@ body {
   }
 }
 
-.container {
-  padding: 0 20px;
+button.button--primary-catalog {
+  width: 100%;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 30px;
+    width: 248px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 110px;
+    width: 168px;
   }
+}
+
+.container {
+  margin: 0 auto;
+
+  // @media (min-width: variables.$tablet-width) {
+  //   padding: 0 30px;
+  // }
+
+  // @media (min-width: variables.$desktop-width) {
+  //   padding: 0 110px;
+  // }
 }
 
 .button-additional {

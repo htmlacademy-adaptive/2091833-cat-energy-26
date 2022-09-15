@@ -8,11 +8,11 @@
 
   @media (min-width: variables.$tablet-width) {
     padding: 0;
-    margin-bottom: 82px;
+    margin-bottom: 163px;
   }
 
-  @media (min-width: variables.$tablet-width) {
-    margin-bottom: 84px;
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 165px;
   }
 }
 
