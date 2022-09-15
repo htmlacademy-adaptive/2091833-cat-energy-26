@@ -4,25 +4,42 @@
 
 .example {
   background-color: colors.$white-lighter;
-  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: variables.$tablet-width) {
     background-color: colors.$white;
-    padding: 0 30px;
+    // padding: 0 30px;
+    position: relative;
+    z-index: -1;
   }
 
   @media (min-width: variables.$desktop-width) {
     display: flex;
     flex-direction: row;
-    padding: 0 110px;
+    justify-content: space-between;
+    // padding: 0 110px;
     background-color: colors.$white-light;
   }
 }
 
 .example-wrapper {
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: colors.$white-lighter;
+      height: 462px;
+      width: 100vw;
+      z-index: -2;
+    }
+  }
+
   @media (min-width: variables.$desktop-width) {
     margin-top: 205px;
     position: relative;
@@ -100,6 +117,7 @@
     width: 708px;
     display: flex;
     align-items: center;
+    margin-bottom: 100px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -206,19 +224,16 @@
   }
 }
 
-.example__before-after {
-  padding-bottom: 40px;
-}
-
-.example__before-after-text {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
 .example__image {
-  @media (min-width: variables.$desktop-width) {
+  @media (min-width: variables.$tablet-width) {
     display: block;
-    margin-left: auto;
+    z-index: 22;
+    margin-bottom: 101px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    top: -136px;
+    right: 110px;
   }
 }

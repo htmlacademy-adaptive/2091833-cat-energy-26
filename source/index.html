@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body class="page__body">
     <header class="main-header container">
@@ -17,20 +19,27 @@
             width="33"
             height="38"
           />
-          <img
-            class="main-header__logo-image-mobile main-header__logo-image-mobile-name"
-            src="img/logo_name.svg"
-            alt="Компания Кэт энерджи"
-            width="101"
-            height="18"
-          />
-          <img
-            class="main-header__logo-image-tablet"
-            src="img/logo-tablet.svg"
-            alt="Логотип Кэт энерджи"
-            width="174"
-            height="52"
-          />
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/logo-desktop.svg"
+              width="202"
+              height="59"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-tablet.svg"
+              width="174"
+              height="52"
+            />
+            <img
+              class="main-header__logo-image-mobile-name"
+              src="img/logo_name.svg"
+              alt="Логотип Кэт энерджи"
+              width="101"
+              height="18"
+            />
+          </picture>
         </a>
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="button-burger" type="button">
@@ -55,7 +64,7 @@
       </div>
     </header>
     <main class="main-page">
-      <section class="introduction">
+      <section class="introduction container">
         <div class="introduction__wrapper">
           <div class="introduction__title-wrapper">
             <h1 class="introduction__title-position introduction__title">
@@ -66,21 +75,56 @@
             >
           </div>
           <div class="introduction__title-backimage-wrapper">
-            <img
-              class="introduction__title-backimage"
-              src="img/background-desktop.jpg"
-              width="320"
-              height="302"
-              alt=""
-            />
+            <span class="introduction__title-backimage-inner"></span>
+            <picture class="introduction__title-backimage">
+              <source
+                media="(min-width: 1440px)"
+                width="720"
+                height="694"
+                srcset="
+                  img/index-background-desktop.png    1x,
+                  img/index-background-desktop@2x.png 2x
+                "
+              />
+              <source
+                srcset="
+                  img/index-background-mobile.png    1x,
+                  img/index-background-mobile@2x.png 2x
+                "
+              />
+              <img
+                class="introduction__title-backimage"
+                src="img/index-background-mobile.png"
+                width="320"
+                height="302"
+                alt=""
+              />
+            </picture>
           </div>
-          <img
-            class="introduction__can-image"
-            src="img/can-mobile.png"
-            width="280"
-            height="270"
-            alt="Питание со вкусом курицы"
-          />
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="img/index-can.png 1x, index-can@2x.png 2x"
+              width="552"
+              height="499"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/index-can-tablet.png 1x, index-can-tablet@2x.png 2x"
+              width="709"
+              height="609"
+            />
+            <source
+              srcset="img/index-can-mobile.png 1x, index-can-mobile@2x.png 2x"
+            />
+            <img
+              class="introduction__can-image"
+              src="img/can-mobile.png"
+              width="280"
+              height="270"
+              alt="Питание со вкусом курицы"
+            />
+          </picture>
           <div class="introduction__button">
             <button class="button button--primary button--index" type="button">
               подобрать программу
@@ -94,7 +138,7 @@
           <div class="advantages__card-title-wrapper">
             <img
               class="advantages__card-image"
-              src="img/cat_back.png"
+              src="img/cat_back-mobile.svg"
               width="50"
               height="53"
             />
@@ -124,8 +168,8 @@
         <div class="advantages__card advantages__wrapper">
           <div class="advantages__card-title-wrapper">
             <img
-              class="advantages__card-image"
-              src="img/lion-cat.png"
+              class="advantages__card-image-second"
+              src="img/lioncat_back-mobile.svg"
               width="67"
               height="50"
             />
@@ -257,26 +301,30 @@
             </div>
           </div>
         </div>
-        <img
-          class="example__image"
-          src="img/before-mobile1.png"
-          width="280"
-          height="232"
-          alt="Фотография кота до похудения"
-        />
-        <div class="example__before-after">
-          <span class="example__before-after-text visually-hidden">было</span>
-          <progress
-            class="example__before-after-progress-bar visually-hidden"
-            value="40"
-            max="100"
-          ></progress>
-          <input
-            class="example__before-after-progress-bar-range visually-hidden"
-            type="range"
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              img/cat-slider-tablet.png    1x,
+              img/cat-slider-tablet@2x.png 2x
+            "
+            width="560"
+            height="512"
           />
-          <span class="example__before-after-text visually-hidden">стало</span>
-        </div>
+          <source
+            srcset="
+              img/cat-slider-mobile.png    1x,
+              img/cat-slider-mobile@2x.png 2x
+            "
+          />
+          <img
+            class="example__image"
+            src="img/cat-slider-mobile.png"
+            width="280"
+            height="232"
+            alt="Фотография кота до похудения"
+          />
+        </picture>
       </section>
       <section class="cooperation">
         <h2 class="visually-hidden">Сотрудничество</h2>
