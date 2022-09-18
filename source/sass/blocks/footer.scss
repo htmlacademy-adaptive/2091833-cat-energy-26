@@ -71,10 +71,8 @@
     margin-right: 0;
   }
 
-  &:hover {
-    .footer__social-element-image path {
-      fill: colors.$primary-color;
-    }
+  &:hover .footer__social-element-image path {
+    fill: colors.$primary-color;
   }
 
   &:active {

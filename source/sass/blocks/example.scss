@@ -4,9 +4,6 @@
 
 .example {
   background-color: colors.$white-lighter;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   @media (min-width: variables.$tablet-width) {
     background-color: colors.$white;
@@ -16,16 +13,15 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    // padding: 0 110px;
     background-color: colors.$white-light;
   }
 }
 
 .example-wrapper {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
     &::before {
@@ -41,8 +37,13 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    margin: 0 auto;
     margin-top: 205px;
+    width: 1220px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -234,6 +235,6 @@
   @media (min-width: variables.$desktop-width) {
     position: absolute;
     top: -136px;
-    right: 110px;
+    right: 0;
   }
 }
