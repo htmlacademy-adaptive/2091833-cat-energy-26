@@ -9,16 +9,20 @@
     <link rel="manifest" href="manifest.webmanifest" />
   </head>
   <body class="page__body">
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="vk-icon" viewBox="0 0 28 22" fill="none">
+        <path
+          d="M1 5.34c0-.86.52-1.32 1.55-1.38l3.97.02c.26 0 .44.13.53.38.4 1.26.86 2.34 1.37 3.25.5.92 1.17 1.97 1.99 3.16.07.15.18.23.34.23.13 0 .22-.06.3-.18l.07-.28.03-4.35c0-.3-.07-.5-.23-.6-.15-.1-.43-.18-.83-.23-.32-.05-.48-.23-.48-.55 0-.07 0-.12.02-.15.38-1.09 1.44-1.63 3.2-1.63l1.5-.03c.67 0 1.23.16 1.67.48.44.32.67.82.67 1.5v5.72c.12.08.24.12.34.12.27 0 .5-.15.7-.45 1.95-2.58 3-4.31 3.17-5.18 0-.02.01-.06.05-.13.12-.25.33-.47.61-.65.29-.19.53-.31.75-.38a.55.55 0 0 1 .24-.05h4.13l.26.03c.36 0 .63.16.83.47.07.1.12.21.15.33a2.4 2.4 0 0 1 .06.55v.18a6.11 6.11 0 0 1-.94 2.2c-.5.78-1.15 1.62-1.93 2.53-.79.9-1.27 1.5-1.47 1.78-.16.2-.24.39-.24.56 0 .13.07.28.21.45l3.9 4.63c.2.26.31.56.31.88 0 .38-.16.7-.48.95-.32.25-.7.4-1.14.43l-.46.02h-4.04c-.02 0-.06 0-.11.02a.86.86 0 0 1-.1.01c-.4 0-.76-.16-1.1-.48-.12-.13-.96-1.12-2.5-2.97a1.39 1.39 0 0 0-.38-.32 38.47 38.47 0 0 0-.53 2.24l-.08.42a1.4 1.4 0 0 1-1.12 1.06l-.37.02h-2.61c-1.48 0-2.95-.63-4.41-1.9a19.3 19.3 0 0 1-3.96-4.95 47.51 47.51 0 0 1-3.28-7.05A1.92 1.92 0 0 1 1 5.34Zm16.01 6.51c-.37 0-.7-.1-1.01-.29a.9.9 0 0 1-.45-.79V5c0-.34-.1-.58-.27-.72-.18-.14-.49-.21-.93-.21l-1.52.05c-.76 0-1.34.12-1.73.37.78.36 1.17.93 1.17 1.71v4.43a1.5 1.5 0 0 1-.53 1.04c-.32.28-.68.42-1.07.42-.53 0-.94-.24-1.22-.73a26.16 26.16 0 0 1-3.1-5.63l-.23-.66-3.55-.02c-.23 0-.36.01-.38.03-.03.03-.04.1-.04.22 0 .15.01.3.05.48l.56 1.4c1.49 3.64 3.11 6.51 4.86 8.6 1.75 2.1 3.47 3.15 5.16 3.15h2.66c.1 0 .19-.03.24-.09.05-.06.1-.17.13-.34l.06-.25.5-2.21c.15-.3.27-.5.38-.6.2-.2.42-.28.69-.28.43 0 .86.24 1.3.73l2.27 2.71c.14.22.3.33.45.33h4.4c.53 0 .8-.13.8-.38a.47.47 0 0 0-.08-.25l-3.87-4.55c-.3-.35-.45-.73-.45-1.13 0-.4.14-.8.43-1.16.23-.34.68-.9 1.34-1.67.67-.78 1.25-1.51 1.75-2.19.5-.68.82-1.3.98-1.85l.08-.33a.37.37 0 0 1-.02-.16c0-.07-.01-.14-.03-.19h-4.18c-.27.1-.48.25-.64.45L21.8 6c-.45 1.16-1.6 2.94-3.5 5.36-.36.33-.8.5-1.3.5Z"
+          fill="#666"
+        />
+      </symbol>
+    </svg>
     <header class="main-header container">
       <div class="main-header__wrapper main-header__wrapper-index">
         <a class="main-header__logo" href="#">
-          <img
-            class="main-header__logo-image-mobile"
-            src="img/logo-mobile.svg"
-            alt="Логотип Кэт энерджи"
-            width="33"
-            height="38"
-          />
+          <svg class="main-header__logo-image-mobile" width="34" height="38">
+            <use xlink:href="img/sprite.svg#logo-mobile"></use>
+          </svg>
           <picture>
             <source
               media="(min-width: 1440px)"
@@ -153,15 +157,8 @@
             <a class="advantages__card-link" href="catalog.html"
               >каталог slim</a
             >
-            <svg
-              width="24"
-              height="12"
-              viewBox="0 0 24 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path stroke="#000" stroke-width="2" d="M0 6h18" />
-              <path d="m24 6-6.8 5.2V.8L24 6Z" fill="#000" />
+            <svg width="24" height="12">
+              <use xlink:href="img/sprite.svg#arrow-icon"></use>
             </svg>
           </div>
         </div>
@@ -181,15 +178,8 @@
           </p>
           <div class="advantages__card-link-wrapper">
             <a class="advantages__card-link" href="catalog.html">каталог pro</a>
-            <svg
-              width="24"
-              height="12"
-              viewBox="0 0 24 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path stroke="#000" stroke-width="2" d="M0 6h18" />
-              <path d="m24 6-6.8 5.2V.8L24 6Z" fill="#000" />
+            <svg width="24" height="12">
+              <use xlink:href="img/sprite.svg#arrow-icon"></use>
             </svg>
           </div>
         </div>
@@ -201,13 +191,9 @@
         <div class="features__card-wrapper">
           <div class="features__card">
             <div class="features__card-image-wrapper">
-              <img
-                class="features__card-image"
-                src="img/icon_leaf.svg"
-                width="30"
-                height="32"
-                alt=""
-              />
+              <svg width="30" height="32">
+                <use xlink:href="img/sprite.svg#leaf-icon"></use>
+              </svg>
             </div>
             <p
               class="features__card-description features__card-description-wrapper"
@@ -219,13 +205,9 @@
           </div>
           <div class="features__card">
             <div class="features__card-image-wrapper">
-              <img
-                class="features__card-image"
-                src="img/icon_tub.svg"
-                width="30"
-                height="32"
-                alt=""
-              />
+              <svg width="30" height="31">
+                <use xlink:href="img/sprite.svg#tub-icon"></use>
+              </svg>
             </div>
             <p
               class="features__card-description features__card-description-wrapper"
@@ -237,13 +219,9 @@
           </div>
           <div class="features__card">
             <div class="features__card-image-wrapper">
-              <img
-                class="features__card-image"
-                src="img/icon_eat.svg"
-                width="30"
-                height="32"
-                alt=""
-              />
+              <svg width="26" height="30">
+                <use xlink:href="img/sprite.svg#eat-icon"></use>
+              </svg>
             </div>
             <p
               class="features__card-description features__card-description-wrapper"
@@ -255,13 +233,9 @@
           </div>
           <div class="features__card">
             <div class="features__card-image-wrapper">
-              <img
-                class="features__card-image"
-                src="img/icon_alarm.svg"
-                width="30"
-                height="32"
-                alt=""
-              />
+              <svg width="33" height="33">
+                <use xlink:href="img/sprite.svg#alarm-icon"></use>
+              </svg>
             </div>
             <p
               class="features__card-description features__card-description-wrapper"
@@ -273,58 +247,77 @@
           </div>
         </div>
       </section>
-      <section class="example example-wrapper">
-        <div class="example__inner">
-          <div class="example__title-wrapper">
-            <h2 class="example__title">Живой пример</h2>
-            <p class="example__description example__description-wrapper">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
-              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
-              При этом он не менял своих привычек и по-прежнему спит по 16 часов
-              в день.
-            </p>
-          </div>
-          <div class="example__info-wrapper">
-            <div class="example__info-inner">
-              <fieldset class="example__info">
-                <legend class="example__info-title">снижение веса</legend>
-                <span class="example__info-text">5 КГ</span>
-              </fieldset>
-              <fieldset class="example__info">
-                <legend class="example__info-title">затрачено времени</legend>
-                <span class="example__info-text">60 ДНЕЙ</span>
-              </fieldset>
+      <section class="example">
+        <div class="example-wrapper">
+          <div class="example__inner">
+            <div class="example__title-wrapper">
+              <h2 class="example__title">Живой пример</h2>
+              <p class="example__description example__description-wrapper">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+                на Cat Energy Slim. Отличный результат без изнуряющих
+                тренировок! При этом он не менял своих привычек и по-прежнему
+                спит по 16 часов в день.
+              </p>
             </div>
-            <div class="example__price">
-              <span class="example__price-title"> Затраты на питание: </span>
-              <span class="example__price-title"> 15 000 РУБ. </span>
+            <div class="example__info-wrapper">
+              <div class="example__info-inner">
+                <fieldset class="example__info">
+                  <legend class="example__info-title">снижение веса</legend>
+                  <span class="example__info-text">5 КГ</span>
+                </fieldset>
+                <fieldset class="example__info">
+                  <legend class="example__info-title">затрачено времени</legend>
+                  <span class="example__info-text">60 ДНЕЙ</span>
+                </fieldset>
+              </div>
+              <div class="example__price">
+                <span class="example__price-title"> Затраты на питание: </span>
+                <span class="example__price-title"> 15 000 РУБ. </span>
+              </div>
             </div>
           </div>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              type="image/webp"
+              srcset="
+                img/cat-slider-tablet.webp 1x,
+                cat-slider-tablet@2x.webp  2x
+              "
+              width="560"
+              height="512"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                img/cat-slider-tablet.png    1x,
+                img/cat-slider-tablet@2x.png 2x
+              "
+              width="560"
+              height="512"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                img/cat-slider-mobile.webp 1x,
+                cat-slider-mobile@2x.webp  2x
+              "
+            />
+            <source
+              srcset="
+                img/cat-slider-mobile.png    1x,
+                img/cat-slider-mobile@2x.png 2x
+              "
+            />
+            <img
+              class="example__image"
+              src="img/cat-slider-mobile.png"
+              width="280"
+              height="232"
+              alt="Фотография кота до похудения"
+            />
+          </picture>
         </div>
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="
-              img/cat-slider-tablet.png    1x,
-              img/cat-slider-tablet@2x.png 2x
-            "
-            width="560"
-            height="512"
-          />
-          <source
-            srcset="
-              img/cat-slider-mobile.png    1x,
-              img/cat-slider-mobile@2x.png 2x
-            "
-          />
-          <img
-            class="example__image"
-            src="img/cat-slider-mobile.png"
-            width="280"
-            height="232"
-            alt="Фотография кота до похудения"
-          />
-        </picture>
       </section>
       <section class="cooperation">
         <h2 class="visually-hidden">Сотрудничество</h2>
@@ -350,30 +343,21 @@
     </main>
     <footer class="footer">
       <div class="footer__logo-wrapper">
-        <img
+        <svg
           class="footer__logo-image"
-          src="img/logo_name.svg"
-          alt="Компания Кэт энерджи"
           width="128"
-          height="24"
-        />
+          height="27"
+          aria-label="Логотип компании Кэт энерджи"
+        >
+          <use xlink:href="img/sprite.svg#footer-logo"></use>
+        </svg>
       </div>
       <div class="footer__social">
         <ul class="footer__social-list">
           <li class="footer__social-element">
             <a href="https://vk.com/htmlacademy">
-              <svg
-                class="footer__social-element-image"
-                width="28"
-                height="22"
-                viewBox="0 0 28 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 5.3C1 4.5 1.5 4 2.5 4h4c.3 0 .5.1.5.4l1.4 3.2a39.8 39.8 0 0 0 2.4 3.4s.2 0 .2-.2l.1-.3V6.2c0-.3 0-.5-.2-.6l-.8-.2c-.3 0-.5-.3-.5-.6v-.1C10 3.6 11.1 3 12.8 3h1.5c.7 0 1.3.2 1.7.5.4.3.7.8.7 1.5v5.7l.3.1c.3 0 .5-.1.7-.4A17.7 17.7 0 0 0 21 5l.6-.7.8-.4H26.9c.4 0 .7.2.8.5l.2.3a2.4 2.4 0 0 1 0 .6v.1c0 .7-.4 1.5-.9 2.2-.5.8-1.1 1.7-2 2.6a27.6 27.6 0 0 0-1.6 2.3c0 .1 0 .3.2.5l3.9 4.6c.2.3.3.5.3.9s-.2.7-.5 1a2 2 0 0 1-1.1.3h-4.6l-.1.1c-.4 0-.8-.2-1.1-.5a241.3 241.3 0 0 1-3-3.3 38.5 38.5 0 0 0-.4 2.3l-.1.4c-.2.6-.6 1-1.1 1h-3c-1.5 0-3-.6-4.4-1.8-1.5-1.3-2.8-3-4-5A47.5 47.5 0 0 1 1 5.3ZM17 12c-.4 0-.7-.1-1-.3a.9.9 0 0 1-.5-.8V5c0-.3 0-.6-.2-.7-.2-.2-.5-.2-1-.2h-1.5c-.7 0-1.3.1-1.7.4.8.3 1.2 1 1.2 1.7v4.4c0 .4-.2.8-.6 1-.3.3-.6.5-1 .5-.6 0-1-.3-1.3-.8-1.3-2-2.4-3.8-3-5.6L6 5.1H2.2v.7l.6 1.4a33 33 0 0 0 4.8 8.6c1.8 2 3.5 3.1 5.2 3.1h2.9l.1-.4v-.3l.6-2.2.3-.6c.2-.2.5-.3.7-.3.5 0 .9.3 1.3.8l2.3 2.7c.2.2.3.3.5.3h4.4c.5 0 .8-.1.8-.4l-.1-.2-3.9-4.6c-.3-.3-.4-.7-.4-1 0-.5.1-.9.4-1.3L24 9.8l1.8-2.2c.5-.7.8-1.3 1-1.9V5.1h-4.2c-.3 0-.5.2-.6.4l-.2.5c-.4 1.1-1.6 3-3.5 5.3-.4.4-.8.6-1.3.6Z"
-                  fill="#666"
-                />
+              <svg class="footer__social-element-image" width="28" height="22">
+                <use xlink:href="#vk-icon"></use>
               </svg>
             </a>
           </li>
