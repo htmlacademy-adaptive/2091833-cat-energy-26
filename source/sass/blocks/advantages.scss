@@ -3,8 +3,7 @@
 @use "../colors.scss";
 
 .advantages {
-  width: 320px;
-  margin: 0 auto;
+  width: 280px;
 
   @media (min-width: variables.$tablet-width) {
     width: 708px;
