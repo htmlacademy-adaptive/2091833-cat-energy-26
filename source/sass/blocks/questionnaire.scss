@@ -2,6 +2,18 @@
 @use "../variables.scss";
 @use "../colors.scss";
 
+.questionnaire {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
+  }
+}
+
 .questionnaire__title {
   @include mixin.text_reset;
   padding-top: 27px;
@@ -354,9 +366,17 @@
   }
 }
 
+.questionnaire__form-subtitle br {
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
+}
+
 .questionnaire__form-subtitle {
   font-size: 24px;
   line-height: 26px;
+  position: relative;
+  display: inline-block;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 36px;
@@ -367,7 +387,8 @@
 .questionnaire__form-subtitle-wrapper {
   @include mixin.text_reset;
   margin-bottom: 35px;
-  width: 187px;
+  width: auto;
+  padding-top: 26px;
 
   @media (min-width: variables.$tablet-width) {
     width: auto;

@@ -30,6 +30,13 @@
   }
 }
 
+.cooperation__inner--secondary {
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+    padding: 60px 30px 56px;
+  }
+}
+
 .cooperation--secondary {
   margin: 0;
   background-color: colors.$white-light;

@@ -4,17 +4,22 @@
 
 .footer {
   background-color: colors.$white-light;
-  padding: 0 20px;
+}
+
+.footer__inner {
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 58px 30px 55px;
+    padding: 58px;
+    width: 708px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 58px 70px;
+    width: 1220px;
   }
 }
 

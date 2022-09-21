@@ -3,14 +3,52 @@
 @use "../colors.scss";
 
 .additional {
-  padding: 0 20px 35px 20px;
+  padding-bottom: 35px;
+  width: 280px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 38px;
+    right: -90%;
+    width: 280px;
+    height: 2px;
+    background-color: colors.$primary-color;
+  }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 30px 35px 30px;
+    width: 708px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 46px;
+      left: -54%;
+      width: 386px;
+      height: 2px;
+      background-color: colors.$primary-color;
+    }
+
+    &::before {
+      top: 46px;
+      right: -50%;
+      width: 600px;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 110px 35px 110px;
+    width: 1220px;
+
+    &::after {
+      left: -54%;
+      width: 50%;
+    }
+
+    &::before {
+      right: -54%;
+      width: 120%;
+    }
   }
 }
 
@@ -50,43 +88,12 @@
     background-color: colors.$white-lighter2;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 38px;
-    right: -16%;
-    width: 20%;
-    height: 2px;
-    background-color: colors.$primary-color;
-  }
-
   @media (min-width: variables.$tablet-width) {
     font-size: 36px;
     line-height: 36px;
 
     &::after {
-      position: absolute;
-      content: "";
-      top: 46px;
-      left: -10%;
-      width: 6%;
-      height: 2px;
-      background-color: colors.$primary-color;
-    }
-
-    &::before {
-      top: 46px;
-      width: 66%;
-    }
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    &::after {
-      left: -12%;
-    }
-
-    &::before {
-      width: 80%;
+      position: static;
     }
   }
 }
