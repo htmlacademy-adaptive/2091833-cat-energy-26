@@ -4,51 +4,58 @@
 
 .additional {
   padding-bottom: 35px;
-  width: 280px;
   position: relative;
 
   &::before {
     position: absolute;
     content: "";
     top: 38px;
-    right: -90%;
-    width: 280px;
+    right: 0;
+    width: 20vw;
     height: 2px;
     background-color: colors.$primary-color;
   }
 
   @media (min-width: variables.$tablet-width) {
-    width: 708px;
-
     &::after {
       position: absolute;
       content: "";
       top: 46px;
-      left: -54%;
-      width: 386px;
+      left: 0;
+      width: 8vw;
       height: 2px;
       background-color: colors.$primary-color;
     }
 
     &::before {
       top: 46px;
-      right: -50%;
-      width: 600px;
+      right: 0;
+      width: 44vw;
     }
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 1220px;
-
     &::after {
-      left: -54%;
-      width: 50%;
+      left: 0;
+      width: 6vw;
     }
 
     &::before {
-      right: -54%;
-      width: 120%;
+      right: 0;
+      width: 62vw;
     }
+  }
+}
+
+.additional__holder {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
   }
 }
 
@@ -64,7 +71,7 @@
   width: 280px;
 
   @media (min-width: variables.$tablet-width) {
-    width: 708px;
+    width: 638px;
     padding: 0 38px;
   }
 
