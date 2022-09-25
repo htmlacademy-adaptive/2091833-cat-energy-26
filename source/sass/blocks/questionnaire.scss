@@ -2,7 +2,7 @@
 @use "../variables.scss";
 @use "../colors.scss";
 
-.questionnaire {
+.questionnaire__title-wrapper {
   width: 280px;
 
   @media (min-width: variables.$tablet-width) {
@@ -63,10 +63,16 @@
 }
 
 .questionnaire__form-wrapper {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+  }
+
   @media (min-width: variables.$desktop-width) {
     display: flex;
     justify-content: space-between;
-    max-width: 1220px;
+    width: 1220px;
     margin-bottom: 65px;
   }
 }
@@ -144,7 +150,7 @@
 
 .questionnaire__form-text {
   @include mixin.text_reset;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -209,6 +215,50 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 436px;
+  }
+}
+
+.questionnaire__form-textarea-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 38px;
+    right: 0;
+    width: 20vw;
+    height: 2px;
+    background-color: colors.$primary-color;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 46px;
+      left: 0;
+      width: 8vw;
+      height: 2px;
+      background-color: colors.$primary-color;
+    }
+
+    &::before {
+      top: 46px;
+      right: 0;
+      width: 24vw;
+    }
+  }
+}
+
+.questionnaire__form-textarea-inner {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
   }
 }
 
@@ -302,6 +352,14 @@
   }
 }
 
+.questionnaire__form-choice:focus {
+  outline: none;
+
+  .radio-control {
+    outline: 2px solid colors.$grey;
+  }
+}
+
 .questionnaire__form-choice-text {
   font-size: 16px;
   line-height: 18px;
@@ -334,6 +392,62 @@
   }
 }
 
+.questionnaire__form-contact-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 38px;
+    right: 0;
+    width: 20vw;
+    height: 2px;
+    background-color: colors.$primary-color;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 46px;
+      left: 0;
+      width: 8vw;
+      height: 2px;
+      background-color: colors.$primary-color;
+    }
+
+    &::before {
+      top: 46px;
+      right: 0;
+      width: 24vw;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after {
+      left: 0;
+      width: 6vw;
+    }
+
+    &::before {
+      right: 0;
+      width: 52vw;
+    }
+  }
+}
+
+.questionnaire__form-contact-inner {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 632px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
+  }
+}
+
 .questionnaire__form-textarea {
   width: 280px;
   margin-bottom: 22px;
@@ -353,7 +467,7 @@
 }
 
 .questionnaire__form-textarea-text {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -376,7 +490,7 @@
   font-size: 24px;
   line-height: 26px;
   position: relative;
-  display: inline-block;
+  display: block;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 36px;
@@ -463,6 +577,62 @@
 }
 
 .questionnaire__form-checkbox-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 38px;
+    right: 0;
+    width: 20vw;
+    height: 2px;
+    background-color: colors.$primary-color;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 46px;
+      left: 0;
+      width: 8vw;
+      height: 2px;
+      background-color: colors.$primary-color;
+    }
+
+    &::before {
+      top: 46px;
+      right: 0;
+      width: 24vw;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::after {
+      left: 0;
+      width: 6vw;
+    }
+
+    &::before {
+      right: 0;
+      width: 52vw;
+    }
+  }
+}
+
+.questionnaire__form-checkbox-inner {
+  width: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
+  }
+}
+
+.questionnaire__form-checkbox {
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
@@ -496,6 +666,14 @@
 
   @media (min-width: variables.$desktop-width) {
     margin-right: 104px;
+  }
+}
+
+.questionnaire__form-checkbox-element:focus {
+  outline: none;
+
+  .checkbox-control {
+    outline: 2px solid colors.$grey;
   }
 }
 

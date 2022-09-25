@@ -7,11 +7,27 @@
     <link href="css/style.min.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preload" href="css/style.min.css" as="style" />
+    <link rel="preload" href="js/script.js" as="script" />
+    <link
+      rel="preload"
+      href="fonts/oswaldregular.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/oswaldmedium.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="page__body">
     <header class="main-header container">
       <div class="main-header__wrapper main-header__wrapper-index">
-        <a class="main-header__logo" href="#">
+        <a class="main-header__logo" href="index.html">
           <img
             class="main-header__logo-image-mobile"
             src="img/logo-mobile.svg"
@@ -41,7 +57,6 @@
             />
           </picture>
         </a>
-
         <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="button-burger" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -73,19 +88,21 @@
       </div>
     </header>
     <main class="main-page">
-      <section class="questionnaire container">
-        <h1 class="questionnaire__title questionnaire__title-decoration">
-          Подбор программы
-        </h1>
-        <p class="questionnaire__text questionnaire__text-decoration">
-          Заполните анкету, и мы подберем программу питания для вашего кота
-        </p>
+      <section class="questionnaire">
+        <div class="questionnaire__title-wrapper container">
+          <h1 class="questionnaire__title questionnaire__title-decoration">
+            Подбор программы
+          </h1>
+          <p class="questionnaire__text questionnaire__text-decoration">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+        </div>
         <form
           class="questionnaire__form"
           action="https://echo.htmlacademy.ru/courses"
           method="get"
         >
-          <div class="questionnaire__form-wrapper">
+          <div class="questionnaire__form-wrapper container">
             <div class="questionnaire__form-inner">
               <label
                 class="questionnaire__form-label"
@@ -123,13 +140,14 @@
             <div class="questionnaire__form-choice-wrapper">
               <ul class="questionnaire__form-choice-list">
                 <li class="questionnaire__form-choice-element">
-                  <label class="questionnaire__form-choice">
+                  <label class="questionnaire__form-choice" tabindex="0">
                     <input
-                      class="visually-hidden questionnaire__form-radio questionnaire__form-radio--active"
+                      class="visually-hidden questionnaire__form-radio"
                       type="radio"
                       name="weight-choice"
                       value="weight-loss"
                       checked=""
+                      tabindex="0"
                     /><span class="radio-control"></span
                     ><span class="questionnaire__form-choice-text"
                       >похудение</span
@@ -137,12 +155,13 @@
                   </label>
                 </li>
                 <li class="questionnaire__form-choice-element">
-                  <label class="questionnaire__form-choice"
+                  <label class="questionnaire__form-choice" tabindex="0"
                     ><input
                       class="visually-hidden questionnaire__form-radio"
                       type="radio"
                       name="weight-choice"
                       value="weight-gain"
+                      tabindex="0"
                     />
                     <span class="radio-control"></span>
                     <span class="questionnaire__form-choice-text"
@@ -151,12 +170,13 @@
                   </label>
                 </li>
                 <li class="questionnaire__form-choice-element">
-                  <label class="questionnaire__form-choice"
+                  <label class="questionnaire__form-choice" tabindex="0"
                     ><input
                       class="visually-hidden questionnaire__form-radio"
                       type="radio"
                       name="weight-choice"
                       value="weight-dont-know"
+                      tabindex="0"
                     /><span class="radio-control"></span
                     ><span class="questionnaire__form-choice-text"
                       >Не знаю (Нужен ваш совет)</span
@@ -166,83 +186,115 @@
               </ul>
             </div>
           </div>
-          <h2
-            class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
-          >
-            Контактные данные <br />
-            (владельца кота)
-          </h2>
-          <div class="questionnaire__form-contact">
-            <label class="questionnaire__form-contact-label"
-              ><span class="questionnaire__form-title">E-mail:*</span
-              ><input
-                class="questionnaire__form-email questionnaire__form-text"
-                type="email"
-                placeholder="kuklachev@gmail.com"
-                required /><span class="questionnaire__form-icon-mail"></span
-            ></label>
-            <label class="questionnaire__form-contact-label"
-              ><span class="questionnaire__form-title">Телефон:*</span
-              ><input
-                class="questionnaire__form-phone questionnaire__form-text"
-                type="tel"
-                placeholder="8 (960) 900-60-90"
-                required /><span class="questionnaire__form-phone-icon"></span
-            ></label>
+          <div class="questionnaire__form-contact-wrapper">
+            <div class="questionnaire__form-contact-inner container">
+              <h2
+                class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
+              >
+                Контактные данные <br />
+                (владельца кота)
+              </h2>
+              <div class="questionnaire__form-contact">
+                <label class="questionnaire__form-contact-label"
+                  ><span class="questionnaire__form-title">E-mail:*</span
+                  ><input
+                    class="questionnaire__form-email questionnaire__form-text"
+                    type="email"
+                    placeholder="kuklachev@gmail.com"
+                    required /><span
+                    class="questionnaire__form-icon-mail"
+                  ></span
+                ></label>
+                <label class="questionnaire__form-contact-label"
+                  ><span class="questionnaire__form-title">Телефон:*</span
+                  ><input
+                    class="questionnaire__form-phone questionnaire__form-text"
+                    type="tel"
+                    placeholder="8 (960) 900-60-90"
+                    required /><span
+                    class="questionnaire__form-phone-icon"
+                  ></span
+                ></label>
+              </div>
+            </div>
           </div>
-          <h2
-            class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
-          >
-            Комментарий
-          </h2>
-          <textarea
-            class="questionnaire__form-textarea questionnaire__form-textarea-text"
-            placeholder="Расскажите обо всех повАдках кота"
-            rows="6"
-          ></textarea>
-          <h2
-            class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
-          >
-            Дополнительно
-          </h2>
+          <div class="questionnaire__form-textarea-wrapper">
+            <div class="questionnaire__form-textarea-inner container">
+              <label>
+                <h2
+                  class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
+                >
+                  Комментарий
+                </h2>
+                <textarea
+                  class="questionnaire__form-textarea questionnaire__form-textarea-text"
+                  placeholder="Расскажите обо всех повАдках кота"
+                  rows="6"
+                ></textarea>
+              </label>
+            </div>
+          </div>
           <div class="questionnaire__form-checkbox-wrapper">
-            <label class="questionnaire__form-checkbox-element">
-              <input
-                class="visually-hidden questionnaire__form-checkbox"
-                type="checkbox"
-                name="sugar-free"
-                checked
-              /><span class="checkbox-control"></span
-              ><span class="questionnaire__form-checkbox-text"
-                >сахарозаменитель</span
+            <div class="questionnaire__form-checkbox-inner container">
+              <h2
+                class="questionnaire__form-subtitle questionnaire__form-subtitle-wrapper"
               >
-            </label>
-            <label class="questionnaire__form-checkbox-element">
-              <input
-                class="visually-hidden questionnaire__form-checkbox"
-                type="checkbox"
-                name="water"
-              /><span class="checkbox-control"></span
-              ><span class="questionnaire__form-checkbox-text"
-                >питьевая вода</span
-              >
-            </label>
-            <label class="questionnaire__form-checkbox-element">
-              <input
-                class="visually-hidden questionnaire__form-checkbox"
-                type="checkbox"
-                name="milk"
-              /><span class="checkbox-control"></span
-              ><span class="questionnaire__form-checkbox-text">молоко</span>
-            </label>
-            <label class="questionnaire__form-checkbox-element">
-              <input
-                class="visually-hidden questionnaire__form-checkbox"
-                type="checkbox"
-                name="vitamine"
-              /><span class="checkbox-control"></span
-              ><span class="questionnaire__form-checkbox-text">витамины</span>
-            </label>
+                Дополнительно
+              </h2>
+              <div class="questionnaire__form-checkbox">
+                <label
+                  class="questionnaire__form-checkbox-element"
+                  tabindex="0"
+                >
+                  <input
+                    class="visually-hidden questionnaire__form-checkbox"
+                    type="checkbox"
+                    name="sugar-free"
+                    checked
+                  /><span class="checkbox-control"></span
+                  ><span class="questionnaire__form-checkbox-text"
+                    >сахарозаменитель</span
+                  >
+                </label>
+                <label
+                  class="questionnaire__form-checkbox-element"
+                  tabindex="0"
+                >
+                  <input
+                    class="visually-hidden questionnaire__form-checkbox"
+                    type="checkbox"
+                    name="water"
+                  /><span class="checkbox-control"></span
+                  ><span class="questionnaire__form-checkbox-text"
+                    >питьевая вода</span
+                  >
+                </label>
+                <label
+                  class="questionnaire__form-checkbox-element"
+                  tabindex="0"
+                >
+                  <input
+                    class="visually-hidden questionnaire__form-checkbox"
+                    type="checkbox"
+                    name="milk"
+                  /><span class="checkbox-control"></span
+                  ><span class="questionnaire__form-checkbox-text">молоко</span>
+                </label>
+                <label
+                  class="questionnaire__form-checkbox-element"
+                  tabindex="0"
+                >
+                  <input
+                    class="visually-hidden questionnaire__form-checkbox"
+                    type="checkbox"
+                    name="vitamine"
+                  /><span class="checkbox-control"></span
+                  ><span class="questionnaire__form-checkbox-text"
+                    >витамины</span
+                  >
+                </label>
+              </div>
+            </div>
           </div>
           <div class="questionnaire__form-submit">
             <button
@@ -346,20 +398,25 @@
           </ul>
         </div>
         <div class="footer__academy-logo">
-          <span class="footer__academy-logo-text">HTML Academy</span>
-          <svg
-            class="footer__academy-logo-image"
-            width="27"
-            height="34"
-            viewBox="0 0 27 34"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+          <a
+            class="footer__academy-logo-link"
+            href="https://htmlacademy.ru/intensive/adaptive"
           >
-            <path
-              d="M13.6 0h-.1L0 1.4V26l13.5 8L27 26V1.4L13.6 0Zm11.6 25-11.7 7-11.7-7V15l11.7 6.8v1.3l-8-4.7v1.2l8 4.8v1.3l-8-4.8v1.2l8 4.9 8.1-4.9V17l3.6-2.1V25Zm0-11.5L22 15.3l-1.5 1-7-4.3v1.2l6 3.6-.2.1-.8.5-5-3v1.3l3.9 2.3-1 .6-3-1.7v1.2l2 1.2-2 1.1-11.6-6.8 11.6-7 11.8 6.9Zm0-1.3L13.4 5.3l-11.6 7V3l11.7-1.2L25.2 3v9.2Z"
-              fill="#666"
-            />
-          </svg>
+            <span class="footer__academy-logo-text">HTML Academy</span>
+            <svg
+              class="footer__academy-logo-image"
+              width="27"
+              height="34"
+              viewBox="0 0 27 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.6 0h-.1L0 1.4V26l13.5 8L27 26V1.4L13.6 0Zm11.6 25-11.7 7-11.7-7V15l11.7 6.8v1.3l-8-4.7v1.2l8 4.8v1.3l-8-4.8v1.2l8 4.9 8.1-4.9V17l3.6-2.1V25Zm0-11.5L22 15.3l-1.5 1-7-4.3v1.2l6 3.6-.2.1-.8.5-5-3v1.3l3.9 2.3-1 .6-3-1.7v1.2l2 1.2-2 1.1-11.6-6.8 11.6-7 11.8 6.9Zm0-1.3L13.4 5.3l-11.6 7V3l11.7-1.2L25.2 3v9.2Z"
+                fill="#666"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </footer>

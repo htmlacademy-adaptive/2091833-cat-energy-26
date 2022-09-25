@@ -4,7 +4,7 @@
 
 body {
   @include mixin.reset; //сбрасывает padding и margin
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -32,7 +32,7 @@ body {
 .button {
   @include mixin.reset; //сбрасывает padding и margin
   border: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   font-style: normal;

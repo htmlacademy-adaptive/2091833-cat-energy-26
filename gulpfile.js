@@ -82,9 +82,12 @@ const sprite = () => {
 
 const copy = (done) => {
   return gulp
-    .src(["source/*.ico", "source/fonts/*.{woff2,woff}"], {
-      base: "source",
-    })
+    .src(
+      ["source/*.ico", "source/fonts/*.{woff2,woff}", "source/*.webmanifest"],
+      {
+        base: "source",
+      }
+    )
     .pipe(gulp.dest("build"));
   done();
 };

@@ -88,7 +88,7 @@
   }
 }
 
-.main-nav__element-link--current {
+.main-nav__element--current {
   @media (min-width: variables.$tablet-width) {
     border-bottom: 2px solid colors.$primary-color;
   }

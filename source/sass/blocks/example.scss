@@ -17,7 +17,7 @@
   }
 }
 
-.example-wrapper {
+.example__wrapper {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -44,6 +44,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
